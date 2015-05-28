@@ -11,18 +11,16 @@ echo "Hardseed交互脚本 \n"
 echo "Linux bash version BETA1 \n"
 
 #Main Script
-endscript=1
-
-while [ $endscript -eq 1 ]
-do
-
 class="3"
 range="2"
 timeout="32"
 tasks="8"
 dlpath="~"
 proxy="socks5://127.0.0.1:1080"
+endscript=1
 
+while [ $endscript -eq 1 ]
+do
 echo "确认需要拉取的AV类别\n"
 echo "-----------------------------\n"
 echo "欧美原创 [草榴] → 请输入1\n"
