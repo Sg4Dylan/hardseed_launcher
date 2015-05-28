@@ -16,13 +16,6 @@ endscript=1
 while [ $endscript -eq 1 ]
 do
 
-class="3"
-range="2"
-timeout="32"
-tasks="8"
-dlpath="~"
-proxy="socks5://127.0.0.1:1080"
-
 echo "确认需要拉取的AV类别\n"
 echo "-----------------------------\n"
 echo "欧美原创 [草榴] → 请输入1\n"
@@ -95,6 +88,7 @@ case $range in
 	5) range="5000"
 	;;
 	6) range="20000"
+	;;
 esac
 
 echo "输入下载超时数值\n"
@@ -127,7 +121,7 @@ read proxy
 read -p "按任意键开始下载" var
 
 #Start Download
-hardseed --saveas-path ${dlpath} --topics-range ${range} --concurrent-tasks ${tasks} --av-class ${class} --timeout-download-picture ${timeout} --proxy ${proxy}
+hardseed --saveas-path ${dlpath} --topics-range ${range:="500"} --concurrent-tasks ${tasks:="8"} --av-class ${class:="caoliu_asia_non_mosaicked_original"} --timeout-download-picture ${timeout:="32"} --proxy ${proxy:="socks5://127.0.0.1:1080"}
 
 echo "-----------------------------\n"
 echo "下载已完成，是否继续新的下载任务?\n"
