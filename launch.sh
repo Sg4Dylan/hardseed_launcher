@@ -121,7 +121,7 @@ read proxy
 read -p "按任意键开始下载" var
 
 #Start Download
-hardseed --saveas-path ${dlpath} --topics-range ${range:="500"} --concurrent-tasks ${tasks:="8"} --av-class ${class:="caoliu_asia_non_mosaicked_original"} --timeout-download-picture ${timeout:="32"} --proxy ${proxy:="socks5://127.0.0.1:1080"}
+#hardseed --saveas-path ${dlpath} --topics-range ${range:="500"} --concurrent-tasks ${tasks:="8"} --av-class ${class:="caoliu_asia_non_mosaicked_original"} --timeout-download-picture ${timeout:="32"} --proxy ${proxy:="socks5://127.0.0.1:1080"}
 
 echo "-----------------------------\n"
 echo "下载已完成，是否继续新的下载任务?\n"
@@ -131,16 +131,12 @@ echo "-----------------------------\n"
 echo "     不输则直接回车退出\n"
 echo -n "-----------------------------\n"
 read endscript
-if ["$endscript"="Y"]
+if [ "$endscript" = "Y" ]||[ "$endscript" = "y" ];
 	then 
 	echo "女神都在${dlpath}等你哦~☆\n"
-	endscript=0
-elif ["$endscript"="y"]
-	then
-	echo "女神都在${dlpath}等你哦~☆\n"
-	endscript=0
+	endscript=1
 else
 	echo "继续新的下载任务哦~☆\n"
-	endscript=1
+	endscript=0
 fi
 done
