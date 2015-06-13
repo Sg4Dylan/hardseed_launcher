@@ -121,7 +121,7 @@ read proxy
 read -p "按任意键开始下载" var
 
 #Start Download
-hardseed --saveas-path ${dlpath} --topics-range ${range:="500"} --concurrent-tasks ${tasks:="8"} --av-class ${class:="caoliu_asia_non_mosaicked_original"} --timeout-download-picture ${timeout:="32"} --proxy ${proxy:="socks5://127.0.0.1:1080"}
+#hardseed --saveas-path ${dlpath} --topics-range ${range:="500"} --concurrent-tasks ${tasks:="8"} --av-class ${class:="caoliu_asia_non_mosaicked_original"} --timeout-download-picture ${timeout:="32"} --proxy ${proxy:="socks5://127.0.0.1:1080"}
 
 echo "-----------------------------\n"
 echo "下载已完成，是否继续新的下载任务?\n"
